@@ -6,7 +6,6 @@ from py_youtube import Data
 
 
 def get_time_info(URL: str) -> int:
-
     def _verify_vid_id_len(vid_id, __expected_len=11):
         len_of_vid_id = len(vid_id)
         if len_of_vid_id != __expected_len:
@@ -42,7 +41,7 @@ def get_time_info(URL: str) -> int:
                 return time
     except Exception:
         raise InvalidURLException
-        
+
 
 @ensure_annotations
 def render_YouTube_video(URL: str, width: int = 780, height: int = 600) -> str:
